@@ -16,7 +16,6 @@ export async function getQuote(req) {
     let q;
     if (author != "") {
         q = await randomAuthor(author);
-
     } else if (quote != "") {
         q = await randomMatch(quote);
     } else {

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Random Quotes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -24,10 +24,14 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": ""
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
