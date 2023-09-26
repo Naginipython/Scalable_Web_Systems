@@ -5,8 +5,8 @@ export default (req, res, next) => {
     let { shift } = req.params || -1;
     shift = parseInt(shift);
     let path = req.path.substring(1,12);
-    console.log(shift);
-    if (path == "testDecrypt" && Number.isInteger(shift) && shift >= 0) {
+    
+    if (path == "testDecrypt" && shift >= 0) {
         req.body.word = caesarDecrypt(word, shift);
         //time and date
         let d = new Date();

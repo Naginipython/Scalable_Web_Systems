@@ -8,15 +8,6 @@ export function caesarEncrypt(word, shift) {
     return caesar(word, theMath)
 }
 
-export function caesarDecrypt(word, shift) {
-    let theMath = (letter) => {
-        let charCode = letter.charCodeAt(0) - shift;
-        return String.fromCharCode((((charCode+26) - 97)%26) + 97);
-    }
-
-    return caesar(word, theMath);
-}
-
 function caesar(word, theMath) {
     let newWord = "";
     for (let w in word) {
@@ -30,6 +21,16 @@ function caesar(word, theMath) {
     console.log(newWord);
     return newWord;
 }
+
+export function caesarDecrypt(word, shift) {
+    let theMath = (letter) => {
+        let charCode = letter.charCodeAt(0) - shift;
+        return String.fromCharCode((((charCode+26) - 97)%26) + 97);
+    }
+
+    return caesar(word, theMath);
+}
+
 // caesarEncrypt("test this", 1);
 // caesarEncrypt("test", 10);
 // caesarDecrypt("uftu uijt", 1);

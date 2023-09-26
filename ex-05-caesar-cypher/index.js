@@ -20,7 +20,7 @@ app.post('/testDecrypt/:shift', decrypt, (req, res) => {
     res.send(req.body);
 });
 
-app.post('/testEncrypt', encrypt, (req, res) => {
+app.post('/testEncrypt/:shift', encrypt, (req, res) => {
     res.send(req.body);
 });
 
