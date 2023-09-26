@@ -16,12 +16,12 @@ app.use(cors());
 app.use(express.json());
 
 //routes
-app.post('/testDecrypt', decrypt, (req, res) => {
-    res.send(req.decrypt);
+app.post('/testDecrypt/:shift', decrypt, (req, res) => {
+    res.send(req.body);
 });
 
 app.post('/testEncrypt', encrypt, (req, res) => {
-    res.send(req.encrypt);
+    res.send(req.body);
 });
 
 app.listen(port, () => {
