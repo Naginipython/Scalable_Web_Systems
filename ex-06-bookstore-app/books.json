@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Hunger Games",
+        "author": "Suzanne Collins",
+        "genre": "Survival",
+        "price": 19.99,
+        "quantity": 20
+    },
+    {
+        "id": 2,
+        "title": "39 Clues",
+        "author": "Rick Riordan",
+        "genre": "Mystery",
+        "price": 15.50,
+        "quantity": 10
+    }
+]
