@@ -1,6 +1,7 @@
 // routes.js
 import express from 'express';
 import bookStore from '../books.json' assert { "type": "json" };
+import { logger } from '../index.js';
 
 const router = express.Router();
 
@@ -34,6 +35,7 @@ router.post('/books', (req, res) => {
         ) {
             //Finds if id is used
             if (bookStore.every(x => x.id != parseInt(json['id']))) {
+                logger.info("Book was added");
                 bookStore.push({
                     "id": parseInt(json['id']),
                     "title": json['title'],
@@ -44,7 +46,8 @@ router.post('/books', (req, res) => {
                 });
                 res.send(bookStore);
             } else {
-                res.send("ERROR: id already in use\nData was not posted");
+                // res.send("ERROR: id already in use\nData was not posted");
+                throw new Error("ID already in use");
             }
         } else {
             res.send("ERROR: id, price, and/or quantity is not a number\nData was not posted");
@@ -93,9 +96,15 @@ router.put('/books/:id', (req, res) => {
 
 router.delete('/books/:id', (req, res) => {
     let { id } = req.params;
+    console.log(id);
     let index = bookStore.findIndex(x => x.id == id);
-    bookStore.splice(index, 1);
-    res.send(bookStore);
+    if (index != -1) {
+        bookStore.splice(index, 1);
+        res.send(bookStore);
+    } else {
+        res.send("ERROR: Id not found");
+    }
+    
 });
 
 export default router;

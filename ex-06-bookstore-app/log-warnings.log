@@ -1,0 +1,108 @@
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '97',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3000',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 8
+    },
+    timestamp: '2023-10-02T20:41:11.940Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '97',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3000',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 11
+    },
+    timestamp: '2023-10-02T20:42:48.301Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '97',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3000',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 10
+    },
+    timestamp: '2023-10-02T20:46:29.999Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '97',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3000',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 15
+    },
+    timestamp: '2023-10-02T20:47:17.698Z'
+  }
+}
