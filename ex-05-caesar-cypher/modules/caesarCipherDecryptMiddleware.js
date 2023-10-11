@@ -1,6 +1,7 @@
 import { caesarDecrypt } from "./caesar.js";
 
 export default (req, res, next) => {
+    console.log("test");
     let word = req.body['word'];
     let { shift } = req.params || -1;
     shift = parseInt(shift);

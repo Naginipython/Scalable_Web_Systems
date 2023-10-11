@@ -1,0 +1,80 @@
+idea: a anime ranker in my image. Score is based off math of many categories, unable to be 100% decided. Rank is numerical with the exception of ties.
+
+structure:
+name
+id
+description
+review
+plotRank
+<option value='10'>10 -The plot is believable, awesome, and though-provoking</option>
+                                        <option value='9'>9 -The plot is awesome and thought-provoking</option>
+                                        <option value='8'>8 -The plot is awesome</option>
+                                        <option value='7'>7 -The plot is alright</option>
+                                        <option value='6'>6 -I like it</option>
+                                        <option value='5'>5 -Enjoyable to watch</option>
+                                        <option value='4'>4 -Nothing new</option>
+                                        <option value='3'>3 -Annoying</option>
+                                        <option value='2'>2 -Garbage</option>
+                                        <option value='1'>1 -Would rather die than to finish</option>
+charRank
+<option value='10'>10 -Every Character is awesome</option>
+                                        <option value='9'>9 -The majority of the characters are awesome</option>
+                                        <option value='8'>8 -I like almost everyone</option>
+                                        <option value='7'>7 -Everyone except ~villain~ is good</option>
+                                        <option value='6'>6 -Only the main characters are good</option>
+                                        <option value='5'>5 -neutral on nearly everyone</option>
+                                        <option value='4'>4 -Only the side character are good</option>
+                                        <option value='3'>3 -Some character are good, sometimes</option>
+                                        <option value='2'>2 -1 character I like</option>
+                                        <option value='1'>1 -I hate everyone</option>
+creativeRank
+<option value='10'>10 -Extrordinarily thought-provoking, awesome, and inspiring</option>
+                                        <option value='9'>9 -pretty thought-provoking and cool</option>
+                                        <option value='8'>8 -Very interesting to me</option>
+                                        <option value='7'>7 -Includes interesting element</option>
+                                        <option value='6'>6 -Fresh</option>
+                                        <option value='5'>5 -Does the usual in different ways</option>
+                                        <option value='4'>4 -Does the usual in worse way</option>
+                                        <option value='3'>3 -Nothing is new</option>
+                                        <option value='2'>2 -Does nearly nothing</option>
+                                        <option value='1'>1 -Fucking bad</option>
+interestRank
+<option value='10'>10 -I have been very inspired by what it introduced, thought-provoking</option>
+                                        <option value='9'>9 -It got me inspired, though-provoking</option>
+                                        <option value='8'>8 -</option>
+                                        <option value='7'>7 -Has a thought-provoking/inspiring element</option>
+                                        <option value='6'>6 -</option>
+                                        <option value='5'>5 -I enjoyed watching</option>
+                                        <option value='4'>4 -Predictable</option>
+                                        <option value='3'>3 -Nothing new happened</option>
+                                        <option value='2'>2 -Very few things allowed to to not sleep</option>
+                                        <option value='1'>1 -sleeping atm</option>
+artRank
+<option value='10'>10 -flows, action-packed, and awesome</option>
+                                        <option value='9'>9 -action-packed and awesome</option>
+                                        <option value='8'>8 -flows, action-packed, OR awesome</option>
+                                        <option value='7'>7 -Nice to look at</option>
+                                        <option value='6'>6 -Animation is consistence, to my knowledge</option>
+                                        <option value='5'>5 -Default</option>
+                                        <option value='4'>4 -looks lil bit bad</option>
+                                        <option value='3'>3 -boring or looks bad</option>
+                                        <option value='2'>2 -boring and looks bad</option>
+                                        <option value='1'>1 -Snoozefest</option>
+compiledRank
+
+routes:
+GET animes (gets a bunch of shows)
+GET anime/:search (searches a certain query)
+GET user (gets a user's database)
+POST newuser (creates a new user)
+POST user/anime (creates a new entry to database)
+PUT user/anime (updates an entry)
+DELETE user/anime (Deletes an entry)
+DELETE user (deletes user)
+
+middleware:
+? simple user login?
+
+2 new npm packages:
+mal-scraper to get MAL data https://www.npmjs.com/package/mal-scraper
+bcrypt for my middleware https://www.npmjs.com/package/bcrypt
