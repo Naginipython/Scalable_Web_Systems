@@ -50,10 +50,10 @@ router.post('/books', (req, res) => {
                 throw new Error("ID already in use");
             }
         } else {
-            res.send("ERROR: id, price, and/or quantity is not a number\nData was not posted");
+            throw new Error("ID, price, and/or quantity is not a number");
         }
     } else {
-        res.send("ERROR: POST json doesn't include all fields\nData was not posted");
+        throw new Error("POST json doesn't include all fields");
     }
 });
 
@@ -65,6 +65,7 @@ router.put('/books/:id', (req, res) => {
     let book = bookStore.find(x => x.id == id);
     if (book != null) {
         // Checks each updatable property
+        logger.info("Data has been updated");
         if (json.hasOwnProperty('title')) {
             book.title = json['title'];
         }
@@ -85,12 +86,12 @@ router.put('/books/:id', (req, res) => {
             if (!isNaN(parseInt(json['quantity']))) {
                 book.quantity = parseInt(json['quantity']);
             } else {
-                res.send("ERROR: quantity isn't a number");
+                throw new Error("ERROR: quantity isn't a number");
             }
         }
         res.send(bookStore);
     } else {
-        res.send("ERROR: id doesn't exist in database\nData was not updated");
+        throw new Error("ID doesn't exist in database");
     }
 });
 
