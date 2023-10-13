@@ -159,3 +159,325 @@
   level: 'error',
   message: 'middlewareError'
 }
+{
+  meta: {
+    error: Error: ID, price, and/or quantity is not a number
+        at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19
+        at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)
+        at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)
+        at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)
+        at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)
+        at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12),
+    level: 'error',
+    message: 'uncaughtException: ID, price, and/or quantity is not a number\n' +
+      'Error: ID, price, and/or quantity is not a number\n' +
+      '    at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)\n' +
+      '    at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)\n' +
+      '    at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)\n' +
+      '    at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12)',
+    stack: 'Error: ID, price, and/or quantity is not a number\n' +
+      '    at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)\n' +
+      '    at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)\n' +
+      '    at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)\n' +
+      '    at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12)',
+    exception: true,
+    date: 'Thu Oct 12 2023 17:42:53 GMT-0400 (Eastern Daylight Time)',
+    process: {
+      pid: 22328,
+      uid: 1000,
+      gid: 1000,
+      cwd: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app',
+      execPath: '/usr/bin/node',
+      version: 'v20.8.0',
+      argv: [
+        '/usr/bin/node',
+        '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/index.js'
+      ],
+      memoryUsage: {
+        rss: 72355840,
+        heapTotal: 11042816,
+        heapUsed: 10582528,
+        external: 2241464,
+        arrayBuffers: 17032
+      }
+    },
+    os: { loadavg: [ 2.65, 2.52, 2.61 ], uptime: 12582.11 },
+    trace: [
+      {
+        column: 19,
+        file: 'file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js',
+        function: null,
+        line: 53,
+        method: null,
+        native: false
+      },
+      {
+        column: 5,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js',
+        function: 'Layer.handle [as handle_request]',
+        line: 95,
+        method: 'handle [as handle_request]',
+        native: false
+      },
+      {
+        column: 13,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js',
+        function: 'next',
+        line: 144,
+        method: null,
+        native: false
+      },
+      {
+        column: 3,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js',
+        function: 'Route.dispatch',
+        line: 114,
+        method: 'dispatch',
+        native: false
+      },
+      {
+        column: 5,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js',
+        function: 'Layer.handle [as handle_request]',
+        line: 95,
+        method: 'handle [as handle_request]',
+        native: false
+      },
+      {
+        column: 15,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: null,
+        line: 284,
+        method: null,
+        native: false
+      },
+      {
+        column: 12,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'Function.process_params',
+        line: 346,
+        method: 'process_params',
+        native: false
+      },
+      {
+        column: 10,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'next',
+        line: 280,
+        method: null,
+        native: false
+      },
+      {
+        column: 3,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'Function.handle',
+        line: 175,
+        method: 'handle',
+        native: false
+      },
+      {
+        column: 12,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'router',
+        line: 47,
+        method: null,
+        native: false
+      }
+    ],
+    req: {
+      url: '/api/books',
+      headers: {
+        'content-length': '114',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+        'content-type': 'application/json',
+        host: 'localhost:3001',
+        connection: 'close'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/books',
+      query: {}
+    }
+  },
+  level: 'error',
+  message: 'middlewareError'
+}
+{
+  meta: {
+    error: Error: ID, price, and/or quantity is not a number
+        at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19
+        at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)
+        at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)
+        at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)
+        at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)
+        at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15
+        at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)
+        at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)
+        at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)
+        at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12),
+    level: 'error',
+    message: 'uncaughtException: ID, price, and/or quantity is not a number\n' +
+      'Error: ID, price, and/or quantity is not a number\n' +
+      '    at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)\n' +
+      '    at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)\n' +
+      '    at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)\n' +
+      '    at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12)',
+    stack: 'Error: ID, price, and/or quantity is not a number\n' +
+      '    at file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js:53:19\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:144:13)\n' +
+      '    at Route.dispatch (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js:114:3)\n' +
+      '    at Layer.handle [as handle_request] (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js:95:5)\n' +
+      '    at /home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:284:15\n' +
+      '    at Function.process_params (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:346:12)\n' +
+      '    at next (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:280:10)\n' +
+      '    at Function.handle (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:175:3)\n' +
+      '    at router (/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js:47:12)',
+    exception: true,
+    date: 'Thu Oct 12 2023 17:45:11 GMT-0400 (Eastern Daylight Time)',
+    process: {
+      pid: 22613,
+      uid: 1000,
+      gid: 1000,
+      cwd: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app',
+      execPath: '/usr/bin/node',
+      version: 'v20.8.0',
+      argv: [
+        '/usr/bin/node',
+        '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/index.js'
+      ],
+      memoryUsage: {
+        rss: 81575936,
+        heapTotal: 28082176,
+        heapUsed: 10283408,
+        external: 2241348,
+        arrayBuffers: 16916
+      }
+    },
+    os: { loadavg: [ 3.53, 2.84, 2.71 ], uptime: 12719.81 },
+    trace: [
+      {
+        column: 19,
+        file: 'file:///home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/routes/routes.js',
+        function: null,
+        line: 53,
+        method: null,
+        native: false
+      },
+      {
+        column: 5,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js',
+        function: 'Layer.handle [as handle_request]',
+        line: 95,
+        method: 'handle [as handle_request]',
+        native: false
+      },
+      {
+        column: 13,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js',
+        function: 'next',
+        line: 144,
+        method: null,
+        native: false
+      },
+      {
+        column: 3,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/route.js',
+        function: 'Route.dispatch',
+        line: 114,
+        method: 'dispatch',
+        native: false
+      },
+      {
+        column: 5,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/layer.js',
+        function: 'Layer.handle [as handle_request]',
+        line: 95,
+        method: 'handle [as handle_request]',
+        native: false
+      },
+      {
+        column: 15,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: null,
+        line: 284,
+        method: null,
+        native: false
+      },
+      {
+        column: 12,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'Function.process_params',
+        line: 346,
+        method: 'process_params',
+        native: false
+      },
+      {
+        column: 10,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'next',
+        line: 280,
+        method: null,
+        native: false
+      },
+      {
+        column: 3,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'Function.handle',
+        line: 175,
+        method: 'handle',
+        native: false
+      },
+      {
+        column: 12,
+        file: '/home/ben/Code/Node.js/Scalable_Web_Systems/ex-06-bookstore-app/node_modules/express/lib/router/index.js',
+        function: 'router',
+        line: 47,
+        method: null,
+        native: false
+      }
+    ],
+    req: {
+      url: '/api/books',
+      headers: {
+        'content-length': '114',
+        'accept-encoding': 'gzip, deflate, br',
+        accept: '*/*',
+        'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+        'content-type': 'application/json',
+        host: 'localhost:3001',
+        connection: 'close'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/books',
+      query: {}
+    }
+  },
+  level: 'error',
+  message: 'middlewareError'
+}

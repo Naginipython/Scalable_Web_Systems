@@ -1,7 +1,8 @@
 import express from 'express';
 import malScraper from 'mal-scraper'; // https://www.npmjs.com/package/mal-scraper
-import auth_user_middleware from '../modules/auth_user_middleware.js';
 import { insecureUserDatabase } from '../index.js';
+import authentication from '../modules/authentication.js';
+
 
 const router = express.Router();
 const type = 'anime';
@@ -19,18 +20,36 @@ router.get('/anime/seasonal', async (req, res) => {
 router.get('/anime/:search', async (req, res) => {
     const {search} = req.params;
     console.log(search);
-    const temp2 = await malScraper.getInfoFromName("Demon slayer entertainment");
     const data = await malScraper.getResultsFromSearch(search, type);
-    res.json(temp2);
+    res.json(data);
 });
 
 // GET user (gets a user's database)
-router.get('/:user', auth_user_middleware, (req, res) => {
+router.get('/:user', async (req, res) => {
     const { user } = req.params;
-    const json = req.body;
-    // TODO: List User's Database
+
     const userData = insecureUserDatabase.find(x => x.username == user);
-    res.json(userData.anime);
+    if (userData != undefined) {
+        if (!userData.public) {
+            //If it isn't then I need to make sure the request contains a user's login data
+            const json = req.body;
+            if (json.hasOwnProperty('username') && json.hasOwnProperty('password')) {
+                // Checks if username/password checks out
+                const auth = await authentication(json['username'], json['password']);
+                if (auth.result) {
+                    res.json(userData.anime);
+                } else {
+                    throw new Error(`ERROR: ${auth.reason}`);
+                }
+            } else {
+                throw new Error("ERROR: User is not public. Please GET with a username & password json body");
+            }
+        } else {
+            res.json(userData.anime);
+        }
+    } else {
+        throw new Error("ERROR: User not found");
+    }
 });
 
 export default router;

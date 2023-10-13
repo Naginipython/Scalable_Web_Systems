@@ -106,3 +106,84 @@
     timestamp: '2023-10-02T20:47:17.698Z'
   }
 }
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '114',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3001',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 6
+    },
+    timestamp: '2023-10-12T21:42:53.559Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '114',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3001',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 5
+    },
+    timestamp: '2023-10-12T21:45:11.260Z'
+  }
+}
+{
+  level: 'error',
+  message: 'HTTP POST /api/books',
+  metadata: {
+    meta: {
+      req: {
+        url: '/api/books',
+        headers: {
+          'content-length': '114',
+          'accept-encoding': 'gzip, deflate, br',
+          accept: '*/*',
+          'user-agent': 'Thunder Client (https://www.thunderclient.com)',
+          'content-type': 'application/json',
+          host: 'localhost:3001',
+          connection: 'close'
+        },
+        method: 'POST',
+        httpVersion: '1.1',
+        originalUrl: '/api/books',
+        query: {}
+      },
+      res: { statusCode: 500 },
+      responseTime: 0
+    },
+    timestamp: '2023-10-12T21:46:09.967Z'
+  }
+}

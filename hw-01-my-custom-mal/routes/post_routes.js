@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import malScraper from 'mal-scraper';
 import { insecureUserDatabase } from '../index.js';
 import auth_user_middleware from '../modules/auth_user_middleware.js';
-import authentication from '../modules/authentication.js';
+import { logger } from '../index.js';
 
 const router = express.Router();
 
@@ -24,6 +24,7 @@ router.post('/newuser', (req, res) => {
                         public: json.hasOwnProperty('public')? json['public'] : true,
                         anime: []
                     });
+                    logger.info("New user was created");
                     res.send("User has been created");
                 });
             });
@@ -40,74 +41,59 @@ router.post('/newuser', (req, res) => {
 router.post('/:user/anime', auth_user_middleware, async (req, res) => {
     const { user } = req.params;
     const json = req.body;
-    //line 44 prob not necessary
-    if (json.hasOwnProperty('username') && json.hasOwnProperty('password')) {
-        if (json['username'] == user) {
-            // Checks authentication again, since middleware allows public
-            const auth = await authentication(json['username'], json['password']);
-            if (auth.result) {
-                // Checking for required fields
-                if (
-                    (json.hasOwnProperty('name') || json.hasOwnProperty('id') || json.hasOwnProperty('url')) &&
-                    json.hasOwnProperty('review') &&
-                    json.hasOwnProperty('plotRank') &&
-                    json.hasOwnProperty('charRank') &&
-                    json.hasOwnProperty('creativeRank') &&
-                    json.hasOwnProperty('interestRank') &&
-                    json.hasOwnProperty('artRank')
-                ) {
-                    // Finally, checking for correct data
-                    if (
-                        !isNaN(parseInt(json['plotRank'])) &&
-                        !isNaN(parseInt(json['charRank'])) &&
-                        !isNaN(parseInt(json['creativeRank'])) &&
-                        !isNaN(parseInt(json['interestRank'])) &&
-                        !isNaN(parseInt(json['artRank']))
-                    ) {
-                        // Building Anime
-                        let temp;
-                        if (json.hasOwnProperty('url')) {
-                            temp = await malScraper.getInfoFromURL(json['url']);
-                        } else if (json.hasOwnProperty('id')) {
-                            temp = await malScraper.getInfoFromURL(`https://myanimelist.net/anime/${json['id']}`);
-                        } else {
-                            temp = await malScraper.getInfoFromName(json['name']);
-                        }
-                        const userData = insecureUserDatabase.find(x => x.username == user);
-                        if (userData['anime'].every(x => x.name != temp.title)) {
-                            let rank = (parseInt(json['plotRank']) + parseInt(json['charRank']) + parseInt(json['creativeRank']) + parseInt(json['interestRank']) + parseInt(json['artRank']))/5.0;
-                            let anime = {
-                                url: temp.url,
-                                name: temp.title,
-                                description: temp.synopsis,
-                                review: json['review'],
-                                plot_rank: parseInt(json['plotRank']),
-                                char_rank: parseInt(json['charRank']),
-                                creative_rank: parseInt(json['creativeRank']),
-                                interest_rank: parseInt(json['interestRank']),
-                                art_rank: parseInt(json['artRank']),
-                                rank: rank
-                            };
-                            
-                            userData['anime'].push(anime);
-                            res.json(anime);
-                        } else {
-                            throw new Error("ERROR: Anime already in database");
-                        }
-                    } else {
-                        throw new Error("ERROR: One or all is not a number: plotRank, charRank, creativeRank, interestRank, artRank")
-                    }
-                } else {
-                    throw new Error("ERROR: json must include all fields: name/id/url, review, plotRank, charRank, creativeRank, interestRank, and artRank");
-                }
+    
+    if (
+        (json.hasOwnProperty('name') || json.hasOwnProperty('id') || json.hasOwnProperty('url')) &&
+        json.hasOwnProperty('review') &&
+        json.hasOwnProperty('plotRank') &&
+        json.hasOwnProperty('charRank') &&
+        json.hasOwnProperty('creativeRank') &&
+        json.hasOwnProperty('interestRank') &&
+        json.hasOwnProperty('artRank')
+    ) {
+        // Finally, checking for correct data
+        if (
+            !isNaN(parseInt(json['plotRank'])) &&
+            !isNaN(parseInt(json['charRank'])) &&
+            !isNaN(parseInt(json['creativeRank'])) &&
+            !isNaN(parseInt(json['interestRank'])) &&
+            !isNaN(parseInt(json['artRank']))
+        ) {
+            // Building Anime
+            let temp;
+            if (json.hasOwnProperty('url')) {
+                temp = await malScraper.getInfoFromURL(json['url']);
+            } else if (json.hasOwnProperty('id')) {
+                temp = await malScraper.getInfoFromURL(`https://myanimelist.net/anime/${json['id']}`);
             } else {
-                throw new Error(`ERROR: ${auth.reason}`);
+                temp = await malScraper.getInfoFromName(json['name']);
+            }
+            const userData = insecureUserDatabase.find(x => x.username == user);
+            if (userData['anime'].every(x => x.name != temp.title)) {
+                let rank = (parseInt(json['plotRank']) + parseInt(json['charRank']) + parseInt(json['creativeRank']) + parseInt(json['interestRank']) + parseInt(json['artRank']))/5.0;
+                let anime = {
+                    url: temp.url,
+                    name: temp.title,
+                    description: temp.synopsis,
+                    review: json['review'],
+                    plot_rank: parseInt(json['plotRank']),
+                    char_rank: parseInt(json['charRank']),
+                    creative_rank: parseInt(json['creativeRank']),
+                    interest_rank: parseInt(json['interestRank']),
+                    art_rank: parseInt(json['artRank']),
+                    rank: rank
+                };
+                
+                userData['anime'].push(anime);
+                res.json(anime);
+            } else {
+                throw new Error("ERROR: Anime already in database");
             }
         } else {
-            throw new Error("ERROR: Username not the same as Route");
+            throw new Error("ERROR: One or all is not a number: plotRank, charRank, creativeRank, interestRank, artRank")
         }
     } else {
-        throw new Error("ERROR: json must include Username and/or Password");
+        throw new Error("ERROR: json must include all fields: name/id/url, review, plotRank, charRank, creativeRank, interestRank, and artRank");
     }
 });
 

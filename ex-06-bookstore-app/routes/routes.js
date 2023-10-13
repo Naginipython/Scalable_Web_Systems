@@ -1,7 +1,7 @@
 // routes.js
 import express from 'express';
 import bookStore from '../books.json' assert { "type": "json" };
-import { logger } from '../index.js';
+// import { logger } from '../index.js';
 
 const router = express.Router();
 
@@ -35,7 +35,7 @@ router.post('/books', (req, res) => {
         ) {
             //Finds if id is used
             if (bookStore.every(x => x.id != parseInt(json['id']))) {
-                logger.info("Book was added");
+                // logger.info("Book was added");
                 bookStore.push({
                     "id": parseInt(json['id']),
                     "title": json['title'],
@@ -65,7 +65,7 @@ router.put('/books/:id', (req, res) => {
     let book = bookStore.find(x => x.id == id);
     if (book != null) {
         // Checks each updatable property
-        logger.info("Data has been updated");
+        // logger.info("Data has been updated");
         if (json.hasOwnProperty('title')) {
             book.title = json['title'];
         }

@@ -1,4 +1,4 @@
-export default (err, req, res, next) => {
+/*export default (err, req, res, next) => {
     // If req.headerSent is true, the response has already been 
     // sent to the client. You should call next(err) to skip.
   
@@ -14,4 +14,4 @@ export default (err, req, res, next) => {
     } else {
         res.status(500).send({ "error": err.message })
     }
-}
+}*/
