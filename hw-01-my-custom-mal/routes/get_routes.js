@@ -2,6 +2,7 @@ import express from 'express';
 import malScraper from 'mal-scraper'; // https://www.npmjs.com/package/mal-scraper
 import { insecureUserDatabase } from '../index.js';
 import authentication from '../modules/authentication.js';
+import { logger, errLogger } from '../logger/logger.js';
 
 
 const router = express.Router();
@@ -11,7 +12,6 @@ const type = 'anime';
 router.get('/anime/seasonal', async (req, res) => {
     const year = req.query['year'] || 2023; //current year as of this code
     const season = req.query['season'] || "fall"; //current season as of this code
-    console.log(`${season} ${year}`);
     const data = await malScraper.getSeason(year, season);
     res.json(data);
 });
@@ -39,16 +39,22 @@ router.get('/:user', async (req, res) => {
                 if (auth.result) {
                     res.json(userData.anime);
                 } else {
-                    throw new Error(`ERROR: ${auth.reason}`);
+                    const err = `${auth.reason}`;
+                    errLogger.error({ message: err, userData: json, path: user});
+                    res.status(500).send({ "Error": err });
                 }
             } else {
-                throw new Error("ERROR: User is not public. Please GET with a username & password json body");
+                const err = "User is not public. Please GET with a username & password json body";
+                errLogger.error({ message: err, userData: json, path: user});
+                res.status(500).send({ "Error": err });
             }
         } else {
             res.json(userData.anime);
         }
     } else {
-        throw new Error("ERROR: User not found");
+        const err = "User not found";
+        errLogger.error({ message: err, path: user});
+        res.status(500).send({ "Error": err });
     }
 });
 

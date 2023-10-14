@@ -3,6 +3,7 @@ import bcrypt from 'bcrypt';
 import malScraper from 'mal-scraper';
 import { insecureUserDatabase } from '../index.js';
 import auth_user_middleware from '../modules/auth_user_middleware.js';
+import { logger, errLogger } from '../logger/logger.js';
 
 const router = express.Router();
 
@@ -30,44 +31,61 @@ router.put('/:user/anime', auth_user_middleware, async (req, res) => {
                 if (!isNaN(parseInt(json['plotRank']))) {
                     animeToUpdate.plot_rank = json['plotRank'];
                 } else {
-                    throw new Error("ERROR: plotRank is not a number");
+                    const err = "plotRank is not a number";
+                    errLogger.error({ message: err, userData: json});
+                    res.status(500).send({ "Error": err });
                 }
             }
             if (json.hasOwnProperty('charRank')) {
                 if (!isNaN(parseInt(json['charRank']))) {
                     animeToUpdate.char_rank = json['charRank'];
                 } else {
-                    throw new Error("ERROR: charRank is not a number");
+                    const err = "charRank is not a number";
+                    errLogger.error({ message: err, userData: json});
+                    res.status(500).send({ "Error": err });
                 }
             }
             if (json.hasOwnProperty('creativeRank')) {
                 if (!isNaN(parseInt(json['creativeRank']))) {
                     animeToUpdate.creative_rank = json['creativeRank'];
                 } else {
-                    throw new Error("ERROR: creativeRank is not a number");
+                    const err = "creativeRank is not a number";
+                    errLogger.error({ message: err, userData: json});
+                    res.status(500).send({ "Error": err });
                 }
             }
             if (json.hasOwnProperty('interestRank')) {
                 if (!isNaN(parseInt(json['interestRank']))) {
                     animeToUpdate.interest_rank = json['interestRank'];
                 } else {
-                    throw new Error("ERROR: interestRank is not a number");
+                    const err = "interestRank is not a number";
+                    errLogger.error({ message: err, userData: json});
+                    res.status(500).send({ "Error": err });
                 }
             }
             if (json.hasOwnProperty('artRank')) {
                 if (!isNaN(parseInt(json['artRank']))) {
                     animeToUpdate.art_rank = json['artRank'];
                 } else {
-                    throw new Error("ERROR: artRank is not a number");
+                    const err = "artRank is not a number";
+                    errLogger.error({ message: err, userData: json});
+                    res.status(500).send({ "Error": err });
                 }
             }
             animeToUpdate.rank = (animeToUpdate.plot_rank + animeToUpdate.char_rank + animeToUpdate.creative_rank + animeToUpdate.interest_rank + animeToUpdate.art_rank)/5.0;
+
+            const reply = `${user} has updated ${temp.title}`;
+            logger.info({message: reply, userData: json});
             res.json(animeToUpdate);
         } else {
-            throw new Error("ERROR: Anime not in database");
+            const err = "Anime not in database";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
     } else {
-        throw new Error("ERROR: JSON must contain a name, url, or id");
+        const err = "JSON must contain a name, url, or id";
+        errLogger.error({ message: err, userData: json});
+        res.status(500).send({ "Error": err });
     }
 });
 
@@ -83,7 +101,9 @@ router.put('/:user', auth_user_middleware, async (req, res) => {
             userData.username = json['newUsername'];
             s += "Username";
         } else {
-            throw new Error("ERROR: Username already used.");
+            const err = "Username already used";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
     }
     if (json.hasOwnProperty('newPassword')) {
@@ -107,7 +127,9 @@ router.put('/:user', auth_user_middleware, async (req, res) => {
             }
             s += "Publicity";
         } else {
-            throw new Error("ERROR: togglePublic is not true/false")
+            const err = "togglePublic is not true/false";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
 
     }

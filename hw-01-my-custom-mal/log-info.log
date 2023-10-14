@@ -1,0 +1,549 @@
+{"level":"info","message":"Test"}
+undefined info: Test
+{ message: 'Test', level: 'info' }
+{ message: 'Test', level: 'info' }
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:44:40.343Z' }
+}
+{ message: 'Test', level: 'info' }
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:45:52.055Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:46:09.609Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:46:24.821Z' }
+}
+{ level: 'info', message: 'Test', metadata: {} }
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:46:39.482Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:48:05.856Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:48:28.055Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:48:41.672Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:48:49.630Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:49:31.238Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:49:43.112Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:50:27.449Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:50:39.889Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:51:12.899Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:51:29.489Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:51:45.060Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:52:01.251Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:52:34.295Z' }
+}
+{
+  level: 'info',
+  message: 'Test',
+  metadata: { timestamp: '2023-10-13T12:53:20.652Z' }
+}
+[2023-10-13T13:07:09.857Z] info message: Test
+[2023-10-13T13:08:27.388Z] info message: Test
+[2023-10-13T13:08:56.409Z] info message: Test
+[2023-10-13T13:10:56.271Z] info message: Test
+[2023-10-13T13:11:37.012Z] info message: Test
+[2023-10-13T13:13:01.192Z] info message: Test
+[2023-10-13T13:13:11.267Z] info message: Test
+[2023-10-13T13:13:22.453Z] info message: Test
+[2023-10-13T13:14:14.736Z] info message: Test
+[2023-10-13T13:14:34.887Z] info message: Test
+[2023-10-13T13:15:05.779Z] info message: Test
+[2023-10-13T13:15:38.973Z] info message: Test
+[2023-10-13T13:16:46.234Z] info message: Test
+[2023-10-13T13:17:06.628Z] info message: Test
+[2023-10-13T13:17:29.965Z] info message: Test
+[2023-10-13T13:17:31.492Z] info message: Test
+[2023-10-13T13:17:40.355Z] info message: Test
+[2023-10-13T13:18:06.557Z] info message: Test
+[2023-10-13T13:18:40.335Z] info message: Test
+[2023-10-13T13:19:05.699Z] info message: Test
+[2023-10-13T13:19:26.824Z] info message: Test
+[2023-10-13T13:20:17.595Z] info message: Test
+[2023-10-13T13:21:59.178Z] info message: Test
+[2023-10-13T13:22:30.364Z] info message: Test
+[2023-10-13T13:22:55.865Z] info message: Test
+[2023-10-13T13:23:52.085Z] info message: Test
+[2023-10-13T13:23:59.022Z] info message: Test
+[2023-10-13T13:24:06.588Z] info message: Test
+[2023-10-13T13:28:48.932Z] info message: Test
+[2023-10-13T13:29:11.106Z] info message: Test
+[2023-10-13T13:30:23.842Z] info message: Test
+[2023-10-13T13:31:14.050Z] info message: Test
+[2023-10-13T13:32:26.705Z] info message: Test
+[2023-10-13T13:32:46.533Z] info message: Test
+[2023-10-13T13:32:50.767Z] info message: Test
+[2023-10-13T13:33:45.178Z] info message: Test
+[2023-10-13T13:35:16.580Z] info message: Test
+[2023-10-13T13:35:49.271Z] info message: Test
+[2023-10-13T13:36:19.951Z] info message: Test
+[2023-10-13T13:40:13.321Z] info message: Test
+[2023-10-13T13:41:46.930Z] info message: Test
+[2023-10-13T13:43:10.876Z] info message: Test
+[2023-10-13T13:43:53.841Z] info message: Test
+[2023-10-13T13:44:09.122Z] info message: Test
+[2023-10-13T13:44:54.965Z] info message: Test
+[2023-10-13T13:50:20.765Z] info message: Test
+[2023-10-13T14:06:23.793Z] info message: User has been created
+[2023-10-13T14:06:48.453Z] info message: Test
+[2023-10-13T14:06:50.781Z] info message: User has been created
+[2023-10-13T14:06:58.773Z] info message: Test
+[2023-10-13T14:10:59.715Z] info message: User has been created
+[2023-10-13T14:15:07.032Z] info message: Test
+[2023-10-13T14:15:09.612Z] info message: User has been created
+[2023-10-13T18:44:11.941Z] info message: Test
+[2023-10-13T18:44:19.463Z] info message: User has been created
+[2023-10-13T18:44:19.465Z] info message: User has been created
+[2023-10-13T18:46:53.088Z] info message: Test
+[2023-10-13T18:46:56.075Z] info message: User has been created
+[2023-10-13T18:46:56.079Z] info message: User has been created
+[2023-10-13T18:47:49.938Z] info message: Test
+[2023-10-13T18:47:53.062Z] info message: User has been created
+[2023-10-13T18:47:53.064Z] info message: User has been created
+[2023-10-13T18:49:52.311Z] info message: Test
+[2023-10-13T18:49:54.498Z] info message: User has been created
+[2023-10-13T18:49:54.500Z] info message: User has been created
+[2023-10-13T18:50:33.557Z] info message: Test
+[2023-10-13T18:50:35.932Z] info message: User has been created
+[2023-10-13T18:50:35.934Z] info message: User has been created
+[2023-10-13T18:50:37.495Z] info message: User has added anime
+[2023-10-13T18:55:59.470Z] info message: Test
+[2023-10-13T18:56:01.942Z] info message: User has been created
+[2023-10-13T18:56:01.943Z] info message: User has been created
+[2023-10-13T18:56:03.621Z] info message: User has added anime
+[2023-10-13T18:56:25.922Z] info message: Test
+[2023-10-13T18:56:27.969Z] info message: User has been created
+[2023-10-13T18:56:27.971Z] info message: User has been created
+[2023-10-13T18:56:29.348Z] info message: User has added anime
+[2023-10-13T18:56:56.937Z] info message: Test
+[2023-10-13T18:56:59.043Z] info message: User has been created
+[2023-10-13T18:56:59.045Z] info message: User has been created
+[2023-10-13T18:57:00.607Z] info message: User has added anime
+[2023-10-13T18:57:43.762Z] info message: Test
+[2023-10-13T18:57:45.643Z] info message: User has been created
+[2023-10-13T18:57:45.645Z] info message: User has been created
+[2023-10-13T18:57:46.818Z] info message: User has added anime
+[2023-10-13T18:58:08.167Z] info message: Test
+[2023-10-13T18:58:10.413Z] info message: User has been created
+[2023-10-13T18:58:10.419Z] info message: User has been created
+[2023-10-13T18:58:12.018Z] info message: User has added anime
+[2023-10-13T22:27:53.131Z] info message: Test
+[2023-10-13T22:27:58.295Z] info message: User has been created
+[2023-10-13T22:27:58.297Z] info message: User has been created
+[2023-10-13T22:27:58.337Z] info message: User has been created
+[2023-10-13T22:27:59.455Z] info message: User has added anime
+[2023-10-13T22:29:16.270Z] info message: Test
+[2023-10-13T22:29:21.128Z] info message: User has been created
+[2023-10-13T22:29:21.129Z] info message: User has been created
+[2023-10-13T22:29:21.142Z] info message: User has been created
+[2023-10-13T22:29:22.441Z] info message: User has added anime
+[2023-10-13T22:31:08.038Z] info message: Test
+[2023-10-13T22:31:10.620Z] info message: User has been created
+[2023-10-13T22:31:10.622Z] info message: User has been created
+[2023-10-13T22:31:10.648Z] info message: User has been created
+[2023-10-13T22:31:12.032Z] info message: User has added anime
+[2023-10-13T22:32:45.777Z] info message: Test
+[2023-10-13T22:32:47.631Z] info message: User has been created
+[2023-10-13T22:32:47.633Z] info message: User has been created
+[2023-10-13T22:32:47.671Z] info message: User has been created
+[2023-10-13T22:32:49.016Z] info message: User has added anime
+[2023-10-13T22:33:39.033Z] info message: User has been created
+[2023-10-13T22:33:54.900Z] info message: User has added anime
+[2023-10-13T22:34:45.754Z] info message: Test
+[2023-10-13T22:34:48.452Z] info message: User has been created
+[2023-10-13T22:34:48.454Z] info message: User has been created
+[2023-10-13T22:34:48.455Z] info message: User has been created
+[2023-10-13T22:34:49.430Z] info message: User has added anime
+[2023-10-13T22:36:00.179Z] info message: Test
+[2023-10-13T22:36:02.303Z] info message: User has been created
+[2023-10-13T22:36:02.305Z] info message: User has been created
+[2023-10-13T22:36:02.327Z] info message: User has been created
+[2023-10-13T22:36:03.246Z] info message: User has added anime
+[2023-10-13T22:36:51.895Z] info message: Test
+[2023-10-13T22:36:53.925Z] info message: User has been created
+[2023-10-13T22:36:53.926Z] info message: User has been created
+[2023-10-13T22:36:53.927Z] info message: User has been created
+[2023-10-13T22:38:05.264Z] info message: Test
+[2023-10-13T22:38:07.539Z] info message: User has been created
+[2023-10-13T22:38:07.542Z] info message: User has been created
+[2023-10-13T22:38:07.565Z] info message: User has been created
+[2023-10-13T22:38:08.592Z] info message: User has added anime
+[2023-10-13T22:38:33.911Z] info message: User has been created
+[2023-10-13T22:38:36.417Z] info message: User has added anime
+[2023-10-13T22:39:48.202Z] info message: Test
+[2023-10-13T22:39:49.532Z] info message: User has been created
+[2023-10-13T22:39:52.046Z] info message: User has added anime
+[2023-10-13T22:40:16.600Z] info message: User has been created
+[2023-10-13T22:40:16.601Z] info message: User has been created
+[2023-10-13T22:40:16.619Z] info message: User has been created
+[2023-10-13T22:40:17.996Z] info message: User has added anime
+[2023-10-13T22:41:36.332Z] info message: Test
+[2023-10-13T22:41:37.594Z] info message: User has been created
+[2023-10-13T22:41:37.595Z] info message: User has been created
+[2023-10-13T22:41:37.614Z] info message: User has been created
+[2023-10-13T22:41:39.064Z] info message: User has added anime
+[2023-10-13T22:41:39.095Z] info message: User has added anime
+[2023-10-13T22:41:52.846Z] info message: Test
+[2023-10-13T22:41:54.642Z] info message: User has been created
+[2023-10-13T22:41:54.644Z] info message: User has been created
+[2023-10-13T22:41:54.644Z] info message: User has been created
+[2023-10-13T22:41:55.788Z] info message: User has added anime
+[2023-10-13T22:41:56.057Z] info message: User has added anime
+[2023-10-13T22:42:10.801Z] info message: Test
+[2023-10-13T22:42:13.531Z] info message: User has been created
+[2023-10-13T22:42:13.532Z] info message: User has been created
+[2023-10-13T22:42:13.538Z] info message: User has been created
+[2023-10-13T22:42:14.745Z] info message: User has added anime
+[2023-10-13T22:42:15.002Z] info message: User has added anime
+[2023-10-13T22:42:36.112Z] info message: Test
+[2023-10-13T22:42:37.860Z] info message: User has been created
+[2023-10-13T22:42:37.861Z] info message: User has been created
+[2023-10-13T22:42:37.862Z] info message: User has been created
+[2023-10-13T22:42:39.314Z] info message: User has added anime
+[2023-10-13T22:42:39.354Z] info message: User has added anime
+[2023-10-13T22:49:03.497Z] info message: User has been created
+[2023-10-13T22:49:08.646Z] info message: User has added anime
+[2023-10-13T22:50:03.310Z] info message: Test
+[2023-10-13T22:50:05.010Z] info message: User has been created
+[2023-10-13T22:50:07.562Z] info message: User has added anime
+[2023-10-13T22:50:49.849Z] info message: User has been created
+[2023-10-13T22:50:49.856Z] info message: User has been created
+[2023-10-13T22:50:49.869Z] info message: User has been created
+[2023-10-13T22:50:51.267Z] info message: User has added anime
+[2023-10-13T22:50:51.360Z] info message: User has added anime
+[2023-10-13T23:20:10.484Z] info message: Test
+[2023-10-13T23:20:14.548Z] info message: User has been created
+[2023-10-13T23:20:14.550Z] info message: User has been created
+[2023-10-13T23:20:14.575Z] info message: User has been created
+[2023-10-13T23:20:14.590Z] info message: User has been created
+[2023-10-13T23:20:15.729Z] info message: User has added anime
+[2023-10-13T23:20:15.931Z] info message: User has added anime
+[2023-10-13T23:20:15.953Z] info message: User has added anime
+[2023-10-13T23:20:41.111Z] info message: Test
+[2023-10-13T23:20:43.695Z] info message: User has been created
+[2023-10-13T23:20:43.697Z] info message: User has been created
+[2023-10-13T23:20:43.697Z] info message: User has been created
+[2023-10-13T23:20:43.700Z] info message: User has been created
+[2023-10-13T23:20:45.069Z] info message: User has added anime
+[2023-10-13T23:20:45.100Z] info message: User has added anime
+[2023-10-13T23:20:45.124Z] info message: User has added anime
+[2023-10-13T23:20:46.270Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:27:55.500Z] info message: Test
+[2023-10-13T23:27:57.040Z] info message: User has been created
+[2023-10-13T23:27:57.042Z] info message: User has been created
+[2023-10-13T23:27:57.082Z] info message: User has been created
+[2023-10-13T23:27:57.083Z] info message: User has been created
+[2023-10-13T23:27:58.138Z] info message: User has added anime
+[2023-10-13T23:27:58.532Z] info message: User has added anime
+[2023-10-13T23:27:58.588Z] info message: User has added anime
+[2023-10-13T23:27:59.992Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:28:20.154Z] info message: Test
+[2023-10-13T23:28:21.550Z] info message: User has been created
+[2023-10-13T23:28:21.552Z] info message: User has been created
+[2023-10-13T23:28:21.553Z] info message: User has been created
+[2023-10-13T23:28:21.563Z] info message: User has been created
+[2023-10-13T23:28:22.703Z] info message: User has added anime
+[2023-10-13T23:28:22.753Z] info message: User has added anime
+[2023-10-13T23:28:22.791Z] info message: User has added anime
+[2023-10-13T23:28:23.991Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:28:59.464Z] info message: Test
+[2023-10-13T23:29:01.005Z] info message: User has been created
+[2023-10-13T23:29:01.007Z] info message: User has been created
+[2023-10-13T23:29:01.016Z] info message: User has been created
+[2023-10-13T23:29:01.051Z] info message: User has been created
+[2023-10-13T23:29:01.986Z] info message: User has added anime
+[2023-10-13T23:29:02.479Z] info message: User has added anime
+[2023-10-13T23:29:02.516Z] info message: User has added anime
+[2023-10-13T23:29:03.991Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:29:09.325Z] info message: Test
+[2023-10-13T23:29:10.673Z] info message: User has been created
+[2023-10-13T23:29:10.675Z] info message: User has been created
+[2023-10-13T23:29:10.698Z] info message: User has been created
+[2023-10-13T23:29:10.699Z] info message: User has been created
+[2023-10-13T23:29:11.738Z] info message: User has added anime
+[2023-10-13T23:29:11.797Z] info message: User has added anime
+[2023-10-13T23:29:11.900Z] info message: User has added anime
+[2023-10-13T23:29:13.107Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:36:00.937Z] info message: Test
+[2023-10-13T23:36:02.520Z] info message: User has been created
+[2023-10-13T23:36:02.522Z] info message: User has been created
+[2023-10-13T23:36:02.563Z] info message: User has been created
+[2023-10-13T23:36:02.564Z] info message: User has been created
+[2023-10-13T23:36:02.589Z] info message: User has been created
+[2023-10-13T23:36:02.611Z] info message: User has been created
+[2023-10-13T23:36:56.717Z] info message: Test
+[2023-10-13T23:36:59.280Z] info message: User has been created
+[2023-10-13T23:36:59.282Z] info message: User has been created
+[2023-10-13T23:36:59.293Z] info message: User has been created
+[2023-10-13T23:36:59.322Z] info message: User has been created
+[2023-10-13T23:36:59.323Z] info message: User has been created
+[2023-10-13T23:36:59.384Z] info message: User has been created
+[2023-10-13T23:37:00.237Z] info message: User has added anime
+[2023-10-13T23:37:00.476Z] info message: User has added anime
+[2023-10-13T23:37:00.624Z] info message: User has added anime
+[2023-10-13T23:37:01.062Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:37:15.508Z] info message: Test
+[2023-10-13T23:37:16.762Z] info message: User has been created
+[2023-10-13T23:37:16.764Z] info message: User has been created
+[2023-10-13T23:37:16.764Z] info message: User has been created
+[2023-10-13T23:37:16.771Z] info message: User has been created
+[2023-10-13T23:37:16.803Z] info message: User has been created
+[2023-10-13T23:37:16.812Z] info message: User has been created
+[2023-10-13T23:38:24.726Z] info message: Test
+[2023-10-13T23:38:26.224Z] info message: User has been created
+[2023-10-13T23:38:26.227Z] info message: User has been created
+[2023-10-13T23:38:26.238Z] info message: User has been created
+[2023-10-13T23:38:26.239Z] info message: User has been created
+[2023-10-13T23:38:26.264Z] info message: User has been created
+[2023-10-13T23:38:26.274Z] info message: User has been created
+[2023-10-13T23:40:29.593Z] info message: Test
+[2023-10-13T23:40:31.070Z] info message: User has been created
+[2023-10-13T23:40:31.071Z] info message: User has been created
+[2023-10-13T23:40:31.085Z] info message: User has been created
+[2023-10-13T23:40:31.106Z] info message: User has been created
+[2023-10-13T23:40:31.110Z] info message: User has been created
+[2023-10-13T23:40:31.147Z] info message: User has been created
+[2023-10-13T23:40:31.965Z] info message: User has added anime
+[2023-10-13T23:40:32.071Z] info message: User has added anime
+[2023-10-13T23:40:32.289Z] info message: User has added anime
+[2023-10-13T23:40:33.284Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:41:03.628Z] info message: Test
+[2023-10-13T23:41:05.003Z] info message: User has been created
+[2023-10-13T23:41:05.020Z] info message: User has been created
+[2023-10-13T23:41:05.027Z] info message: User has been created
+[2023-10-13T23:41:05.028Z] info message: User has been created
+[2023-10-13T23:41:05.044Z] info message: User has been created
+[2023-10-13T23:41:05.082Z] info message: User has been created
+[2023-10-13T23:41:05.994Z] info message: User has added anime
+[2023-10-13T23:41:06.207Z] info message: User has added anime
+[2023-10-13T23:41:06.244Z] info message: User has added anime
+[2023-10-13T23:41:07.311Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:48:08.754Z] info message: User has been created
+[2023-10-13T23:48:21.311Z] info message: User has been created
+[2023-10-13T23:49:55.794Z] info message: Test
+[2023-10-13T23:50:14.046Z] info message: Test
+[2023-10-13T23:50:45.612Z] info message: Test
+[2023-10-13T23:55:21.865Z] info message: Test
+[2023-10-13T23:55:23.176Z] info message: User has been created
+[2023-10-13T23:55:23.178Z] info message: User has been created
+[2023-10-13T23:55:23.217Z] info message: User has been created
+[2023-10-13T23:55:23.217Z] info message: User has been created
+[2023-10-13T23:55:23.257Z] info message: User has been created
+[2023-10-13T23:55:23.274Z] info message: User has been created
+[2023-10-13T23:55:24.387Z] info message: User has added anime
+[2023-10-13T23:55:24.537Z] info message: User has added anime
+[2023-10-13T23:55:24.574Z] info message: User has added anime
+[2023-10-13T23:55:25.633Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:56:46.283Z] info message: User has been created
+[2023-10-13T23:57:42.505Z] info message: user has been deleted
+[2023-10-13T23:58:27.600Z] info message: Test
+[2023-10-13T23:58:29.258Z] info message: User has been created
+[2023-10-13T23:58:29.259Z] info message: User has been created
+[2023-10-13T23:58:29.299Z] info message: User has been created
+[2023-10-13T23:58:29.300Z] info message: User has been created
+[2023-10-13T23:58:29.304Z] info message: User has been created
+[2023-10-13T23:58:29.348Z] info message: User has been created
+[2023-10-13T23:58:30.597Z] info message: User has added anime
+[2023-10-13T23:58:30.625Z] info message: User has added anime
+[2023-10-13T23:58:30.752Z] info message: User has added anime
+[2023-10-13T23:58:31.868Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:59:14.969Z] info message: User has been created
+[2023-10-13T23:59:26.964Z] info message: Test
+[2023-10-13T23:59:28.642Z] info message: User has been created
+[2023-10-13T23:59:28.644Z] info message: User has been created
+[2023-10-13T23:59:28.650Z] info message: User has been created
+[2023-10-13T23:59:28.668Z] info message: User has been created
+[2023-10-13T23:59:28.682Z] info message: User has been created
+[2023-10-13T23:59:28.685Z] info message: User has been created
+[2023-10-13T23:59:28.726Z] info message: User has been created
+[2023-10-13T23:59:28.741Z] info message: User has been created
+[2023-10-13T23:59:28.784Z] info message: delete_user has been deleted
+[2023-10-13T23:59:29.831Z] info message: User has added anime
+[2023-10-13T23:59:29.873Z] info message: User has added anime
+[2023-10-13T23:59:29.977Z] info message: User has added anime
+[2023-10-13T23:59:31.046Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-13T23:59:44.204Z] info message: Test
+[2023-10-13T23:59:45.588Z] info message: User has been created
+[2023-10-13T23:59:45.590Z] info message: User has been created
+[2023-10-13T23:59:45.591Z] info message: User has been created
+[2023-10-13T23:59:45.591Z] info message: User has been created
+[2023-10-13T23:59:45.630Z] info message: User has been created
+[2023-10-13T23:59:45.632Z] info message: User has been created
+[2023-10-13T23:59:45.638Z] info message: User has been created
+[2023-10-13T23:59:45.673Z] info message: User has been created
+[2023-10-13T23:59:45.682Z] info message: delete_user has been deleted
+[2023-10-13T23:59:46.679Z] info message: User has added anime
+[2023-10-13T23:59:46.724Z] info message: User has added anime
+[2023-10-13T23:59:46.781Z] info message: User has added anime
+[2023-10-13T23:59:47.590Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:04:49.788Z] info message: Test
+[2023-10-14T00:13:47.291Z] info message: Test
+[2023-10-14T00:23:18.064Z] info message: Test
+[2023-10-14T00:23:19.416Z] info message: User has been created
+[2023-10-14T00:23:19.418Z] info message: User has been created
+[2023-10-14T00:23:19.441Z] info message: User has been created
+[2023-10-14T00:23:19.442Z] info message: User has been created
+[2023-10-14T00:23:19.457Z] info message: User has been created
+[2023-10-14T00:23:19.458Z] info message: User has been created
+[2023-10-14T00:23:19.498Z] info message: User has been created
+[2023-10-14T00:23:19.530Z] info message: User has been created
+[2023-10-14T00:23:19.573Z] info message: delete_user has been deleted
+[2023-10-14T00:23:20.518Z] info message: User has added anime
+[2023-10-14T00:23:20.554Z] info message: User has added anime
+[2023-10-14T00:23:20.894Z] info message: User has added anime
+[2023-10-14T00:23:21.870Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:35:44.341Z] info message: Test
+[2023-10-14T00:35:50.959Z] info message: User has been created
+[2023-10-14T00:35:50.960Z] info message: User has been created
+[2023-10-14T00:35:51.001Z] info message: User has been created
+[2023-10-14T00:35:51.001Z] info message: User has been created
+[2023-10-14T00:35:51.020Z] info message: User has been created
+[2023-10-14T00:35:51.021Z] info message: User has been created
+[2023-10-14T00:35:51.041Z] info message: User has been created
+[2023-10-14T00:35:51.042Z] info message: User has been created
+[2023-10-14T00:35:51.072Z] info message: User has been created
+[2023-10-14T00:35:51.086Z] info message: delete_user has been deleted
+[2023-10-14T00:35:52.116Z] info message: User has added anime
+[2023-10-14T00:35:52.467Z] info message: User has added anime
+[2023-10-14T00:35:52.490Z] info message: User has added anime
+[2023-10-14T00:35:53.232Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:36:55.737Z] info message: Test
+[2023-10-14T00:36:57.279Z] info message: User has been created
+[2023-10-14T00:36:57.280Z] info message: User has been created
+[2023-10-14T00:36:57.293Z] info message: User has been created
+[2023-10-14T00:36:57.299Z] info message: User has been created
+[2023-10-14T00:36:57.320Z] info message: User has been created
+[2023-10-14T00:36:57.321Z] info message: User has been created
+[2023-10-14T00:36:57.341Z] info message: User has been created
+[2023-10-14T00:36:57.363Z] info message: User has been created
+[2023-10-14T00:36:57.400Z] info message: User has been created
+[2023-10-14T00:36:57.443Z] info message: delete_user has been deleted
+[2023-10-14T00:36:58.388Z] info message: User has added anime
+[2023-10-14T00:36:58.450Z] info message: User has added anime
+[2023-10-14T00:36:58.722Z] info message: User has added anime
+[2023-10-14T00:36:59.770Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:37:31.091Z] info message: Test
+[2023-10-14T00:37:32.537Z] info message: User has been created
+[2023-10-14T00:37:32.539Z] info message: User has been created
+[2023-10-14T00:37:32.540Z] info message: User has been created
+[2023-10-14T00:37:32.548Z] info message: User has been created
+[2023-10-14T00:37:32.580Z] info message: User has been created
+[2023-10-14T00:37:32.584Z] info message: User has been created
+[2023-10-14T00:37:32.584Z] info message: User has been created
+[2023-10-14T00:37:32.631Z] info message: User has been created
+[2023-10-14T00:37:32.661Z] info message: User has been created
+[2023-10-14T00:37:32.704Z] info message: delete_user has been deleted
+[2023-10-14T00:37:33.833Z] info message: User has added anime
+[2023-10-14T00:37:33.875Z] info message: User has added anime
+[2023-10-14T00:37:33.943Z] info message: User has added anime
+[2023-10-14T00:37:34.933Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:38:26.103Z] info message: Test
+[2023-10-14T00:38:27.502Z] info message: User has been created
+[2023-10-14T00:38:27.503Z] info message: User has been created
+[2023-10-14T00:38:27.514Z] info message: User has been created
+[2023-10-14T00:38:27.515Z] info message: User has been created
+[2023-10-14T00:38:27.542Z] info message: User has been created
+[2023-10-14T00:38:27.542Z] info message: User has been created
+[2023-10-14T00:38:27.555Z] info message: User has been created
+[2023-10-14T00:38:27.559Z] info message: User has been created
+[2023-10-14T00:38:27.583Z] info message: User has been created
+[2023-10-14T00:38:27.624Z] info message: delete_user has been deleted
+[2023-10-14T00:38:28.665Z] info message: User has added anime
+[2023-10-14T00:38:28.757Z] info message: User has added anime
+[2023-10-14T00:38:28.989Z] info message: User has added anime
+[2023-10-14T00:38:29.885Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:39:04.703Z] info message: Test
+[2023-10-14T00:39:06.142Z] info message: User has been created
+[2023-10-14T00:39:06.144Z] info message: User has been created
+[2023-10-14T00:39:06.144Z] info message: User has been created
+[2023-10-14T00:39:06.145Z] info message: User has been created
+[2023-10-14T00:39:06.184Z] info message: User has been created
+[2023-10-14T00:39:06.185Z] info message: User has been created
+[2023-10-14T00:39:06.189Z] info message: User has been created
+[2023-10-14T00:39:06.226Z] info message: User has been created
+[2023-10-14T00:39:06.235Z] info message: User has been created
+[2023-10-14T00:39:06.283Z] info message: delete_user has been deleted
+[2023-10-14T00:39:07.318Z] info message: User has added anime
+[2023-10-14T00:39:07.348Z] info message: User has added anime
+[2023-10-14T00:39:07.377Z] info message: User has added anime
+[2023-10-14T00:39:07.688Z] info message: User has added anime
+[2023-10-14T00:39:08.296Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T00:39:33.723Z] info message: Test
+[2023-10-14T00:39:35.366Z] info message: User has been created
+[2023-10-14T00:39:35.381Z] info message: User has been created
+[2023-10-14T00:39:35.381Z] info message: User has been created
+[2023-10-14T00:39:35.416Z] info message: User has been created
+[2023-10-14T00:39:35.421Z] info message: User has been created
+[2023-10-14T00:39:35.422Z] info message: User has been created
+[2023-10-14T00:39:35.457Z] info message: User has been created
+[2023-10-14T00:39:35.461Z] info message: User has been created
+[2023-10-14T00:39:35.511Z] info message: delete_user has been deleted
+[2023-10-14T00:39:35.540Z] info message: User has been created
+[2023-10-14T00:39:36.566Z] info message: User has added anime
+[2023-10-14T00:39:36.620Z] info message: User has added anime
+[2023-10-14T00:39:36.701Z] info message: User has added anime
+[2023-10-14T00:39:36.925Z] info message: User has added anime
+[2023-10-14T00:39:38.007Z] info message: put_user_anime has updated Akame ga Kill!
+[2023-10-14T01:17:02.920Z] info message: User has been created
+[2023-10-14T12:13:09.687Z] info message: User has been created

@@ -2,6 +2,7 @@ import express from 'express';
 import malScraper from 'mal-scraper';
 import { insecureUserDatabase } from '../index.js';
 import auth_user_middleware from '../modules/auth_user_middleware.js';
+import { logger, errLogger } from '../logger/logger.js';
 
 const router = express.Router();
 
@@ -25,8 +26,14 @@ router.delete('/:user/anime', auth_user_middleware, async (req, res) => {
             userData['anime'].splice(animeToDeleteIndex, 1);
             res.send(`${temp.title} was deleted from user's anime`)
         } else {
-            throw new Error("ERROR: Anime not in database")
+            const err = "Anime not in database";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
+    } else {
+        const err = "Must include name, id, or url";
+        errLogger.error({ message: err, userData: json});
+        res.status(500).send({ "Error": err });
     }
 });
 
@@ -41,16 +48,25 @@ router.delete('/:user', auth_user_middleware, async (req, res) => {
                 const userDataIndex = insecureUserDatabase.findIndex(x => x.username == user);
                 if (userDataIndex != -1) {
                     insecureUserDatabase.splice(userDataIndex, 1);
-                    res.send(`${user} has been deleted`);
+
+                    const reply = `${user} has been deleted`;
+                    logger.info({message: reply, userData: json});
+                    res.send(reply);
                 }
             } else {
-                throw new Error("ERROR: 'acknowledgement' must be true to proceed.");
+                const err = "'acknowledgement' must be true to proceed";
+                errLogger.error({ message: err, userData: json});
+                res.status(500).send({ "Error": err });
             }
         } else {
-            throw new Error("ERROR: 'acknowledgement' must be true/false");
+            const err = "'acknowledgement' must be true/false";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
     } else {
-        throw new Error("ERROR: Body must include 'acknowledgement' boolean");
+        const err = "Body must include 'acknowledgement' boolean";
+        errLogger.error({ message: err, userData: json});
+        res.status(500).send({ "Error": err });
     }
 });
 

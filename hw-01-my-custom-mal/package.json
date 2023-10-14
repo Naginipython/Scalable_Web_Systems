@@ -25,7 +25,7 @@
   "contributors": [],
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon --watch index.js --watch routes --watch modules",
+    "dev": "nodemon --watch index.js --watch routes --watch modules --watch logger",
     "test": ""
   },
   "dependencies": {

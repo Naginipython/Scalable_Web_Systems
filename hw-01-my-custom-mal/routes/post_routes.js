@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt';
 import malScraper from 'mal-scraper';
 import { insecureUserDatabase } from '../index.js';
 import auth_user_middleware from '../modules/auth_user_middleware.js';
-import { logger } from '../index.js';
+import { logger, errLogger } from '../logger/logger.js';
 
 const router = express.Router();
 
@@ -24,15 +24,20 @@ router.post('/newuser', (req, res) => {
                         public: json.hasOwnProperty('public')? json['public'] : true,
                         anime: []
                     });
-                    logger.info("New user was created");
-                    res.send("User has been created");
+                    const reply = "User has been created";
+                    logger.info({message: reply, userData: json});
+                    res.send(reply);
                 });
             });
         } else {
-            throw new Error("Error: username already used");
+            const err = "username already used";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
     } else {
-        throw new Error("Error: POST didn't include username and/or password");
+        const err = "POST didn't include username and/or password";
+        errLogger.error({ message: err, userData: json});
+        res.status(500).send({ "Error": err });
     }
 
 });
@@ -83,17 +88,25 @@ router.post('/:user/anime', auth_user_middleware, async (req, res) => {
                     art_rank: parseInt(json['artRank']),
                     rank: rank
                 };
-                
                 userData['anime'].push(anime);
+
+                const reply = "User has added anime";
+                logger.info({message: reply, userData: json});
                 res.json(anime);
             } else {
-                throw new Error("ERROR: Anime already in database");
+                const err = "Anime already in database";
+                errLogger.error({ message: err, userData: json});
+                res.status(500).send({ "Error": err });
             }
         } else {
-            throw new Error("ERROR: One or all is not a number: plotRank, charRank, creativeRank, interestRank, artRank")
+            const err = "One or all is not a number: plotRank, charRank, creativeRank, interestRank, artRank";
+            errLogger.error({ message: err, userData: json});
+            res.status(500).send({ "Error": err });
         }
     } else {
-        throw new Error("ERROR: json must include all fields: name/id/url, review, plotRank, charRank, creativeRank, interestRank, and artRank");
+        const err = "json must include all fields: name/id/url, review, plotRank, charRank, creativeRank, interestRank, and artRank";
+        errLogger.error({ message: err, userData: json});
+        res.status(500).send({ "Error": err });
     }
 });
 

@@ -1,5 +1,6 @@
 import { insecureUserDatabase } from "../index.js";
 import authentication from './authentication.js';
+import { errLogger } from '../logger/logger.js';
 
 export default async (req, res, next) => {
     const { user } = req.params || null;
@@ -11,11 +12,13 @@ export default async (req, res, next) => {
         if (auth.result && json['username'] == user) {
             next();
         } else {
-            // throw new Error("ERROR: Password incorrect");
-            res.status(500).send(`ERROR: ${auth.reason}`);
+            const err = `${auth.reason}`;
+            errLogger.error({ message: err, userData: json, path: user});
+            res.status(500).send({ "Error": err });
         }
     } else {
-        // throw new Error("ERROR: User is not public. Please GET with a username & password json body");
-        res.status(500).send("ERROR: User is not public. Please GET with a username & password json body");
+        const err = "Username/Password required in body";
+        errLogger.error({ message: err, userData: json, path: user});
+        res.status(500).send({ "Error": err });
     }
 }
