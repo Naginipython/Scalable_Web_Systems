@@ -1,0 +1,27 @@
+[
+    {
+        "id": "text0",
+        "name": "Japanese wb69-70",
+        "isChecked": true
+    },
+    {
+        "id": "text1",
+        "name": "OS P3",
+        "isChecked": false
+    },
+    {
+        "id": "text2",
+        "name": "Web ex-10",
+        "isChecked": true
+    },
+    {
+        "id": "text3",
+        "name": "Japanese Speaking Test",
+        "isChecked": false
+    },
+    {
+        "id": "text4",
+        "name": "Japanese Kanji Quiz",
+        "isChecked": false
+    }
+]
