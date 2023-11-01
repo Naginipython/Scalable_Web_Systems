@@ -1,5 +1,6 @@
 // routes.js
 import express from 'express';
+import { getWeather } from '../modules/weather.js';
 
 const router = express.Router();
 
@@ -29,10 +30,11 @@ router.put('/locations/:name', (req, res) => {
 
 router.get('/location-weather/:name', async (req, res) => {
     let { name } = req.params;
-    if (!locationData.hasOwnProperty(name)) {
-        res.status(400).send("Error: name not in data");
-    }
-    const response = await fetch(`http://localhost:3000/api/myweather/${locationData[name].lat}/${locationData[name].long}`);
+    // if (!locationData.hasOwnProperty(name)) {
+    //     res.status(400).send("Error: name not in data");
+    // }
+    const weather = (await getWeather(name))[0];
+    const response = await fetch(`http://localhost:3000/api/myweather/${weather.lat}/${weather.lon}`);
     const data = await response.json();
     res.status(200).json(data);
 });

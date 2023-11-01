@@ -1,0 +1,5 @@
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 1, timestamp: '2023-10-31T12:27:11.329Z' }
+}
