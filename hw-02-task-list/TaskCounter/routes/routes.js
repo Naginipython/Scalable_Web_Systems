@@ -3,7 +3,6 @@ import { logger, errLogger } from '../logger/logger.js';
 
 const router = express.Router();
 
-let id = 0;
 const isCompletedObj = {};
 
 router.post('/add', async (req, res) => {
@@ -16,40 +15,91 @@ router.post('/add', async (req, res) => {
         body: JSON.stringify(req.body)
     });
     if (response.status == 200) {
-        const oldId = id;
-        isCompletedObj[id++] = false;
+        const body = await response.json();
+        const id = body.id;
+        isCompletedObj[id] = false;
         const reply = "Task created successfully";
         logger.info({message: reply, pid: process.ppid});
-        res.status(200).send(`${reply}. Id: ${oldId}`);
+        res.status(200).json({ message: reply, id: id });
     } else {
-        res.status(500).send("Error: task api offline or sent bad data");
+        const err = "task api offline or sent bad data";
+        errLogger.error({ message: err, pid: process.pid });
+        res.status(500).send("Error: "+err);
     }
 });
 
-router.delete('/remove', (req, res) => {
-    const { id } = req.body;
+router.delete('/remove', async (req, res) => {
+    const response = await fetch(`http://localhost:3000/api/remove`, {
+        method: 'DELETE',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(req.body)
+    });
 
-    if (id == undefined) {
-        const err = "'id' field is required";
+    if (response.status == 200) {
+        const { id } = req.body;
+        const reply = "Task deleted successfully";
+        logger.info({message: reply, pid: process.ppid});
+        delete isCompletedObj[id];
+        res.status(200).send(reply);
+    } else {
+        const err = await response.text();
+        errLogger.error({ message: err });
+        res.status(response.status).send(err);
+    }
+    
+});
+
+router.get('/list', async (req, res) => {
+    const response = await fetch(`http://localhost:3000/api/list`);
+
+    if (response.status == 200) {
+        const body = await response.json();
+        logger.info({message: "Received list", pid: process.ppid})
+        // [ {id, name, isChecked} ]
+        // Create data to send
+        const arr = [];
+        for (const data in body) {
+            let isChecked = false;
+            if (isCompletedObj.hasOwnProperty(data)) {
+                isChecked = isCompletedObj[data];
+            }
+            arr.push({
+                id: data,
+                name: body[data],
+                isChecked: isChecked
+            })
+        }
+        res.json(arr);
+    } else {
+        const err = "Could not retrieve list. Task API may be offline";
+        errLogger.error({ message: err });
+        res.status(500).send("Error: "+err);
+    }
+});
+
+router.get('/count', (req, res) => {
+    const result = { completed: 0, not_completed: 0 };
+    for (const x in isCompletedObj) {
+        isCompletedObj[x]? result.completed++ : result.not_completed++;
+    }
+    res.json(result);
+});
+
+router.post('/toggle', (req, res) => {
+    const { toggle, id } = req.body;
+    if (toggle == undefined || id == undefined) {
+        const err = "'isChecked' and 'id' fields are required";
         errLogger.error({ message: err, data: req.body});
         res.status(400).send("Error: "+err);
     }
 
-    if (!tasks.hasOwnProperty(id)) {
-        const err = "id is not in data";
-        errLogger.error({ message: err, data: id});
-        res.status(404).send("Error: "+err);
-    }
-    
-    const reply = "Task deleted successfully";
+    isCompletedObj[id] = toggle;
+    const reply = "Task toggled successfully";
     logger.info({message: reply, pid: process.ppid});
-    delete tasks[id];
-    res.status(200).send(reply);
-});
-
-router.get('/list', (req, res) => {
-    logger.info({message: "Received list", pid: process.ppid})
-    res.json(tasks);
+    res.status(200).json({ message: reply });
 });
 
 export default router;

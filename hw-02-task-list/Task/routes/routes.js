@@ -19,7 +19,7 @@ router.post('/add', (req, res) => {
     const oldId = id-1;
     const reply = "Task created successfully";
     logger.info({message: reply, pid: process.ppid});
-    res.status(200).send(`${reply}. Id: ${oldId}, Task: ${tasks[oldId]}`);
+    res.status(200).json({ message: reply, id: oldId, task: tasks[oldId]});
 });
 
 router.delete('/remove', (req, res) => {
@@ -27,7 +27,7 @@ router.delete('/remove', (req, res) => {
 
     if (id == undefined) {
         const err = "'id' field is required";
-        errLogger.error({ message: err, data: req.body});
+        errLogger.error({ message: err, data: req.body, pid: process.pid});
         res.status(400).send("Error: "+err);
     }
 

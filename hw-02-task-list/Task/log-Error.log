@@ -3,3 +3,43 @@
   message: 'id is not in data',
   metadata: { data: 1, timestamp: '2023-10-31T12:27:11.329Z' }
 }
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 0, timestamp: '2023-11-06T17:56:14.683Z' }
+}
+{
+  level: 'error',
+  message: "'task' field is required",
+  metadata: { data: {}, timestamp: '2023-11-06T18:13:19.806Z' }
+}
+{
+  level: 'error',
+  message: "'task' field is required",
+  metadata: { data: {}, timestamp: '2023-11-06T19:22:13.948Z' }
+}
+{
+  level: 'error',
+  message: "'task' field is required",
+  metadata: { data: {}, timestamp: '2023-11-06T19:25:19.476Z' }
+}
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 0, timestamp: '2023-11-06T21:58:14.214Z' }
+}
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 1, timestamp: '2023-11-06T21:58:14.689Z' }
+}
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 2, timestamp: '2023-11-06T21:58:15.086Z' }
+}
+{
+  level: 'error',
+  message: 'id is not in data',
+  metadata: { data: 0, timestamp: '2023-11-06T21:58:20.827Z' }
+}

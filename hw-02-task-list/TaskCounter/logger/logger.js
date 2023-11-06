@@ -29,9 +29,7 @@ export const errLogger = createLogger({
     ],
     format: format.combine(
         format.timestamp(),
-        format.json(),
-        format.metadata(),
-        format.prettyPrint()
+        myFormat
     )
 })
 
