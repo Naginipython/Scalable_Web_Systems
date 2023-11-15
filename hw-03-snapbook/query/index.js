@@ -23,10 +23,17 @@ app.post('/events', (req, res) => {
 
   if (type === 'CommentCreated') {
     const { id, content, postId } = data;
+    const status = "under_review";
     console.log(`post id = ${postId}`);
     const post = posts[postId];
-    console.log(post);
-    post.comments.push({ id, content });
+    post.comments.push({ id, content, status });
+  }
+
+  if (type === "CommentModerated") {
+    const { id, postId, status } = data;
+    const post = posts[postId];
+    const theComment = post.comments.find(x => x.id == id);
+    theComment.status = status;
   }
   Store.write(posts);
 

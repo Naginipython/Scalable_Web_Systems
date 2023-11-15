@@ -6,7 +6,7 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 
-const servicePorts = [4000, 4001, 4002];
+const servicePorts = [4000, 4001, 4002, 4003];
 
 app.post('/events', async (req, res) => {
   const event = req.body;
