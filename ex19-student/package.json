@@ -1,0 +1,33 @@
+{
+  "name": "ex19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "YOUR NAME",
+    "email": "YOUR EMAIL",
+    "spireid": "YOUR SPIRE ID"
+  },
+  "contributors": [],
+  "scripts": {
+    "setup": "npm --prefix ./.tools install .tools",
+    "submit": "node .tools/submit.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
