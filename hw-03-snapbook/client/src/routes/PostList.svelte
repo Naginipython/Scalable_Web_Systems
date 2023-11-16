@@ -14,6 +14,7 @@
   PostStore.subscribe((_posts) => {
     console.log(`PostList: ${JSON.stringify(_posts)}`);
     posts = _posts;
+    console.log(posts);
   });
 </script>
 
@@ -22,7 +23,7 @@
     <div class="card post">
       <div class="card-body">
         <h3>{post.title}</h3>
-        <CommentList comments={post.comments} />
+        <CommentList postId={post.id} comments={post.comments} />
         <CommentCreate postId={post.id} />
       </div>
     </div>

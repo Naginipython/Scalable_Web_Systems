@@ -18,11 +18,11 @@
       body: JSON.stringify({ content }),
     });
 
-    const data = await res.json();
+    const resUpdate = await fetch('http://localhost:4002/posts');
+    const dataUpdate = await resUpdate.json();
 
     PostStore.update((posts) => {
-      const post = posts[postId];
-      post.comments = data;
+      posts = dataUpdate;
       return posts;
     });
 

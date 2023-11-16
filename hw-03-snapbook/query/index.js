@@ -35,6 +35,21 @@ app.post('/events', (req, res) => {
     const theComment = post.comments.find(x => x.id == id);
     theComment.status = status;
   }
+
+  if (type === "CommentVoteSet") {
+    const { id, postId, votes } = data;
+    const post = posts[postId];
+    const theComment = post.comments.find(x => x.id == id);
+    theComment.votes = votes;
+  }
+
+  if (type === "CommentVoted") {
+    console.log("here");
+    const { id, postId, votes } = data;
+    const post = posts[postId];
+    const theComment = post.comments.find(x => x.id == id);
+    theComment.votes = votes;
+  }
   Store.write(posts);
 
   console.log(posts);
