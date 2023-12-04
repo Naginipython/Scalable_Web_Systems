@@ -1,3 +1,6 @@
+# Contain API keys
+secret.txt
+
 # Logs
 logs
 *.log
