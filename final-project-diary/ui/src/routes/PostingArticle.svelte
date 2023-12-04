@@ -12,14 +12,13 @@
 
     store.subscribe(_content => {
         content = _content;
-        console.log(content);
     })
     
 </script>
 
 <div class="flex justify-center">
     <article class="w-2/3 grid grid-cols-1 justify-center">
-        {#each Object.entries(content) as [_, date]}
+        {#each Object.entries(content).reverse() as [_, date]}
             <PostDate date={date.date} day={date.day} />
         {/each}
     </article>

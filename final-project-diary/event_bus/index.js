@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import errLogger from './logger.js';
 
 const app = express();
 const port = 3005;
@@ -23,7 +24,10 @@ app.post('/event', async (req, res) => {
                 body: JSON.stringify(event),
             });
         } catch (err) {
-            console.log(err);
+            console.log(`(${process.pid}) Event Bus Service: ${err}`);
+            const e = `Event Bus Service receieved an Error: ${err}`;
+            errLogger.error({ message: e, pid: process.pid });
+            res.status(500).send({ status: 'ERROR', message: err });
         }
     }
     res.send({ status: 'OK'});

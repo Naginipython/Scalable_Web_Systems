@@ -1,9 +1,9 @@
 import express from 'express';
 import cors from 'cors';
-import { randomBytes } from 'crypto';
 import morgan from 'morgan';
 import strtime from 'strftime';
 import store from './store.js';
+import { errLogger, logger } from './logger.js';
 
 const app = express();
 const port = 3001;
@@ -34,6 +34,9 @@ app.post('/event', async (req, res) => {
         let time = strtime('%I:%M %P');
         day.push({id: data.id, entry: data.entry, time});
         times[date] = { date, day };
+        const reply = `Time Entry has been created: {'id': '${data.id}', 'date': '${date}', 'time': '${time}'}`;
+        console.log(reply);
+        logger.info({message: reply, pid: process.pid});
 
         try {
             await fetch(`http://localhost:3005/event`, {
@@ -46,6 +49,8 @@ app.post('/event', async (req, res) => {
             });
         } catch (err) {
             console.log(`(${process.pid}) Time Service: ${err}`);
+            const e = `Time Service receieved an Error: ${err}`;
+            errLogger.error({ message: e, pid: process.pid });
             res.status(500).send({ status: 'ERROR', message: err });
         }
     }

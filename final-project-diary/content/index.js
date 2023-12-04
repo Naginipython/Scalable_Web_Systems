@@ -3,6 +3,7 @@ import cors from 'cors';
 import { randomBytes } from 'crypto';
 import morgan from 'morgan';
 import store from './store.js';
+import { errLogger, logger } from './logger.js';
 
 const app = express();
 const port = 3000;
@@ -30,7 +31,10 @@ app.post('/entry', async (req, res) => {
     
         content[id] = { id, entry };
         store.write(content);
-    
+        const reply = `Content Entry has been created: {'id': '${content[id].id}', 'entry': '${content[id].entry}}'`;
+        console.log(reply);
+        logger.info({message: reply, pid: process.pid});
+
         try {
             await fetch(`http://localhost:3005/event`, {
                 method: 'POST',
@@ -42,6 +46,8 @@ app.post('/entry', async (req, res) => {
             });
         } catch (err) {
             console.log(`(${process.pid}) Content Service: ${err}`);
+            const e = `Content Service receieved an Error: ${err}`;
+            errLogger.error({ message: e, pid: process.pid });
             res.status(500).send({ status: 'ERROR', message: err });
         }
     

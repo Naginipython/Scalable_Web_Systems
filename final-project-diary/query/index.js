@@ -22,15 +22,18 @@ app.post('/event', async (req, res) => {
     if (type == "timeCreated") {
         let len = data['day'].length - 1;
         data['day'][len]['tags'] = [];
-        content[data['date']] = data;
+        if (content.hasOwnProperty(data['date'])) {
+            content[data['date']]['day'].unshift(data['day'][len]);
+        } else {
+            content[data['date']] = data;
+        }
+        console.log(data);
     }
     if (type == "tagAdded") {
         const { id } = req.body;
         for (let key of Object.keys(content)) {
-            console.log(content[key]['day']);
             if (content[key]['day'].some(x => x.id == id)) {
                 const obj = content[key]['day'].find(x => x.id == id);
-                console.log(obj);
                 obj['tags'] = data;
             }
         }

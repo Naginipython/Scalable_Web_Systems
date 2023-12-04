@@ -1,12 +1,15 @@
 <script>
     import PostItem from './PostItem.svelte';
     export let date = "";
-    export let day = {};
+    export let day = [];
 </script>
 
-<div class="w-full ps-3 border border-black my-1 rounded-md">
+<div class="w-full pl-3 pr-3 border border-black my-1 rounded-md">
     <p>{date}</p>
-    {#each Object.entries(day) as [_, d]}
-        <PostItem id={d.id} entry={d.entry} time={d.time} tags={d.tags} />
+    <div class="flex justify-center">
+        <hr class="border-black w-full">
+    </div>
+    {#each day as d}
+        <PostItem date={date} id={d.id} entry={d.entry} time={d.time} tags={d.tags} />
     {/each}
 </div>

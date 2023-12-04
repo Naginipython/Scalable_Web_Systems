@@ -15,7 +15,7 @@
         store.update(content => {
             content = update;
             return content;
-        })
+        });
     }
 </script>
 
