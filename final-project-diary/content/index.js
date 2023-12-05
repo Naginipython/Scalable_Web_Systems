@@ -6,7 +6,7 @@ import store from './store.js';
 import { errLogger, logger } from './logger.js';
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 app.use(morgan('tiny'));
 app.use(cors());
@@ -36,7 +36,7 @@ app.post('/entry', async (req, res) => {
         logger.info({message: reply, pid: process.pid});
 
         try {
-            await fetch(`http://localhost:3005/event`, {
+            await fetch(`http://event_bus:3005/event`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

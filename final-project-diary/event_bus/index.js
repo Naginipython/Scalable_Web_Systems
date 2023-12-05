@@ -4,7 +4,12 @@ import errLogger from './logger.js';
 
 const app = express();
 const port = 3005;
-const servicePorts = [3000, 3001, 3002, 3003];
+const servicePorts = [
+    { name: 'content', port: 3001 },
+    { name: 'time', port: 3002 }, 
+    { name: 'tags', port: 3003 }, 
+    {name: 'query', port: 3004 }
+];
 
 app.use(morgan('tiny'));
 app.use(express.json());
@@ -18,7 +23,7 @@ app.post('/event', async (req, res) => {
         console.log(`(${process.pid}) Event Bus Sent Event to ${p}: ${event.type}`);
 
         try {
-            await fetch(`http://localhost:${p}/event`, {
+            await fetch(`http://${p.name}:${p.port}/event`, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(event),

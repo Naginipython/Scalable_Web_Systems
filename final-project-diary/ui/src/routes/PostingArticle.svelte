@@ -5,7 +5,7 @@
     let content = {};
 
     onMount(async () => {
-        const response = await fetch(`http://localhost:3003/content`);
+        const response = await fetch(`http://localhost:3004/content`);
         const json = await response.json();
         store.set(json);
     });

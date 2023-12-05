@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import store from './store.js';
 
 const app = express();
-const port = 3003;
+const port = 3004;
 
 app.use(morgan('tiny'));
 app.use(cors());

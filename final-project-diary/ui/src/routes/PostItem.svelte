@@ -9,16 +9,16 @@
     async function add_tag() {
         let tag = prompt("Please enter a tag handle:");
         if (tag != null && tag != "") {
-            const response = await fetch(`http://localhost:3002/create_tag/${tag}`, {
+            const response = await fetch(`http://localhost:3003/create_tag/${tag}`, {
                 method: 'POST'
             });
-            const response2 = await fetch(`http://localhost:3002/tag/${id}/${tag}`, {
+            const response2 = await fetch(`http://localhost:3003/tag/${id}/${tag}`, {
                 method: 'POST'
             });
             const new_tag = await response2.json();
             store.update(content => {
                 let update = content[date]['day'].find(x => x.id == id);
-                update.tags.unshift(new_tag);
+                update.tags.push(new_tag);
                 return content;
             });
         }

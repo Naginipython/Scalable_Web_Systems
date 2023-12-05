@@ -1,0 +1,26 @@
+version: '3.9'
+services:
+  ui:
+    build: ui
+    ports:
+      - '3000:3000'
+  content:
+    build: content
+    ports:
+      - '3001:3001'
+  time:
+    build: time
+    ports:
+      - '3002:3002'
+  tags:
+    build: tags
+    ports:
+      - '3003:3003'
+  query:
+    build: query
+    ports:
+      - '3004:3004'
+  event_bus:
+    build: event_bus
+    ports:
+      - '3005:3005'
